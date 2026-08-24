@@ -1,0 +1,21 @@
+[package]
+name = "lisp"
+version = "0.1.0"
+edition = "2024"
+license = "Unlicense"
+
+[dependencies]
+anyhow = "1.0.104"
+crossterm = "0.29.0"
+ratatui = "0.30.2"
+slint = "1.9"
+steel-core = "0.8.3"
+unicode-width = "0.2.2"
+vt100 = "0.15"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
